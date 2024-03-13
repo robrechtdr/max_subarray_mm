@@ -1,8 +1,12 @@
-def max_subarray(array):
-    # Assuming a subarray is min length of 2
-    # Keep iterating over array until i == len(array) - 2 (penultimate)
-    # per iter:
-    #   Check subarray sum if not larger then latest largest
+def max_subarray(array: list[int | float]) -> int | float:
+    """
+    >>> max_subarray([-2, 1, -3, 4, -1, 2, 1, -5, 4])
+    6
+
+    Return the sum of numbers of the subarray with the largest sum. 
+
+    Assumes the array and subarray min length is 2.
+    """
     
     i = 0
     j = 1
@@ -36,7 +40,15 @@ def max_subarray(array):
     return max_subarray_sum
 
 
-def max_subarray_var1(array):
+def max_subarray_var1(array: list[int | float]) -> int | float:
+    """
+    >>> max_subarray_var1([-2, 1, -3, 4, -1, 2, 1, -5, 4])
+    6
+
+    Return the sum of numbers of the subarray with the largest sum. 
+
+    Assumes the array min length is 2 and subarray min length is 1.
+    """
     i = 0
     j = 0 # var 1: j can be same pos as i
     
@@ -67,3 +79,7 @@ def max_subarray_var1(array):
             j += 1
           
     return max_subarray_sum
+
+
+def max_subarray_var2(array: list[int | float]) -> int | float:
+    pass 
