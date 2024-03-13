@@ -172,7 +172,6 @@ def max_subarray_var2(array: list[int | float], bitmask: list[int]=None, bitmask
         )
 
         bitmasked_max_subarray = (bitmasked_array[max_subarray_i : max_subarray_i + len(max_subarray)])
-        print(bitmasked_max_subarray)
         return sum(bitmasked_max_subarray)
 
     return max_subarray_sum
