@@ -58,8 +58,6 @@ def max_subarray_var1(array: list[int | float]) -> int | float:
     max_subarray = None
 
     while i <= len(array) - 1: # var 1: i can now be last pos
-        pass
-
         subarray = array[i:j + 1]
 
         subarray_sum = sum(subarray)
@@ -101,7 +99,6 @@ def max_subarray_var2(array: list[int | float], bitmask: list[int]=None, bitmask
     
     So 4 in max subarray remains 4 because it has bitmask 1, 
     2 in max subarray turns to 0 because it has bitmask 0.
-
 
     This implementation assumes the purpose of the bitmask is only to change 
     the value of the final sum number, not affecting the process to determine 
